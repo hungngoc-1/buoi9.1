@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .body {
+            font-size: 18px;
+        }
+        .container {
+            text-align: center;
+            color: black;
+            display: grid;
+            grid-template-areas:
+            "home news contact about";
+            grid-template-columns: 1fr 1fr 1fr 1fr; 
+            gap: 10px;  
+            background-color: white;
+           
+        }
+        .home {
+            grid-area:home;
+           border: 2px solid black;
+        }
+        .news {
+            grid-area:news;
+            border: 2px solid black;
+        }
+        .contact {
+            grid-area:contact;
+            border: 2px solid black;
+        }
+        .about {
+            grid-area:about;
+            border: 2px solid black;  
+        }
+        @media (max-width: 600px) {
+            .container {
+                grid-template-areas:
+                "home"
+                "news"
+                "contact"
+                "about";
+                grid-template-columns: 1fr; /* 1 cột */
+                grid-template-rows: auto; /* Tự động điều chỉnh chiều cao */
+                gap:10px; /* Khoảng cách giữa các ô */
+                
+            }
+            .body {
+                font-size: 14px;
+            }
+        }
+        @media (max-width: 1200px) and (min-width: 601px) {
+            .container {
+                grid-template-areas:
+                "home news"
+               "contact about";
+                grid-template-columns: 1fr 1fr; /* 2 cột */
+                grid-template-rows: auto; /* Tự động điều chỉnh chiều cao */
+                
+            }
+            .body {
+                font-size: 16px;
+            }   
+        }
+        .img {
+            width:100% ;
+            height: auto;
+           
+        }
+           .home1 {
+            height: 50px;
+            border: 1px solid black;
+            position: relative;
+           }  
+           .home2 {
+            padding: 5px 15px;
+            background-color: lightcoral;
+            border-radius: 5px;
+            left: 5px;
+            top: 8px;
+            position: absolute;
+           }  
+           .home3 {
+            float: right;
+           }
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="home">
+            <img src="hoa.png" class="img" >
+            Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, officiis? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque, reiciendis inventore vel sequi eos totam animi? Vitae accusantium repellat qui Lorem, ipsum dolor Lorem ipsum dolor sit amet...
+        <div class="home1">
+            <div class="home2">Live</div>
+            <div class="home3">4.2 Watching</div>
+        </div>
+        </div>
+        <div class="news">
+            <img src="hoa.png" class="img" >
+            Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, officiis? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque, reiciendis inventore vel sequi eos totam animi? Vitae accusantium repellat qui Lorem, ipsum dolor Lorem ipsum dolor sit amet...
+            <div class="home1">
+                <div class="home2">Live</div>
+                <div class="home3">4.2 Watching</div>
+            </div>
+        </div>
+        <div class="contact">
+            <img src="hoa.png" class="img" >
+            Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, officiis? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque, reiciendis inventore vel sequi eos totam animi? Vitae accusantium repellat qui Lorem, ipsum dolor Lorem ipsum dolor sit amet...
+            <div class="home1">
+                <div class="home2">Live</div>
+                <div class="home3">4.2 Watching</div>
+            </div>
+        </div>
+        <div class="about">
+            <img src="hoa.png" class="img" >
+            Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, officiis? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque, reiciendis inventore vel sequi eos totam animi? Vitae accusantium repellat qui Lorem, ipsum dolor Lorem ipsum dolor sit amet...
+            <div class="home1">
+                <div class="home2">Live</div>
+                <div class="home3">4.2 Watching</div>
+            </div>
+        </div>
+        </div>
+</body>
+</html>
